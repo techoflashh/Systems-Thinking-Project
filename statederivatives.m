@@ -1,4 +1,4 @@
-function [t,U] = statederivatives(t,X)
+function U = statederivatives(t,X)
         % Parameters
         m1 = 10;
         m2 = 5;
@@ -38,7 +38,7 @@ function [t,U] = statederivatives(t,X)
         Ki2 = 20;
 
         % Derivative Matrix
-        U = zeros(1,6);
+        U = zeros(6,1);
         U(1) = theta1d - X(3);
         U(2) = theta2d - X(4);
         U(3) = X(5);
