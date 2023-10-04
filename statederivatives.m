@@ -26,8 +26,8 @@ function U = statederivatives(t,X)
         G = [G1; G2];
         
         % Desired Trajectory
-        theta1d = 0;
-        theta2d = 0;
+        q1d = 0;
+        q2d = 0;
 
         % Gain Parameters
         Kp1 = 30;
@@ -39,8 +39,8 @@ function U = statederivatives(t,X)
 
         % Derivative Matrix
         U = zeros(6,1);
-        U(1) = theta1d - X(3);
-        U(2) = theta2d - X(4);
+        U(1) = q1d - X(3);
+        U(2) = q2d - X(4);
         U(3) = X(5);
         U(4) = X(6);
         U(5:6) = -inv(M)*(C*X(5:6)+G)+[Kp1*(U(1))-Kd1*X(5)+Ki1*X(1); Kp2*(U(2))-Kd2*X(6)+Ki2*X(2)];
