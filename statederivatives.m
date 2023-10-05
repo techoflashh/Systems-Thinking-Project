@@ -30,12 +30,12 @@ function U = statederivatives(t,X)
         q2d = 0;
 
         % Gain Parameters
-        Kp1 = 30;
-        Kd1 = 15;
-        Ki1 = 20;
-        Kp2 = 30;
-        Kd2 = 20;
-        Ki2 = 20;
+        Kp1 = 10;
+        Ki1 = 10;
+        Kd1 = 10;
+        Kp2 = 40;
+        Ki2 = 30;
+        Kd2 = 40;
 
         % Derivative Matrix
         U = zeros(6,1);

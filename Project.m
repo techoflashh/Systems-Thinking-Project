@@ -9,7 +9,7 @@ U = [0 0 0.1 0.1 0 0];
 % plot q1 and q2 vs time
 figure(1)
 plot(t,Y(:,3),'r',t,Y(:,4),'b')
-title('q1 and q2 vs Time')
+title('q_1 and q_2 vs Time')
 xlabel('Time (s)')
-ylabel('q1 and q2 (rad)')
-legend('q1','q2')
+ylabel('q_1 and q_2 (rad)')
+legend('q_1','q_2')
