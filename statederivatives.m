@@ -1,4 +1,4 @@
-function U = statederivatives(t,X)
+function Xdot = statederivatives(t,X)
         % Parameters
         m1 = 10;
         m2 = 5;
@@ -38,10 +38,10 @@ function U = statederivatives(t,X)
         Kd2 = 40;
 
         % Derivative Matrix
-        U = zeros(6,1);
-        U(1) = q1d - X(3);
-        U(2) = q2d - X(4);
-        U(3) = X(5);
-        U(4) = X(6);
-        U(5:6) = -inv(M)*(C*X(5:6)+G)+[Kp1*(U(1))-Kd1*X(5)+Ki1*X(1); Kp2*(U(2))-Kd2*X(6)+Ki2*X(2)];
+        Xdot = zeros(6,1);
+        Xdot(1) = q1d - X(3);
+        Xdot(2) = q2d - X(4);
+        Xdot(3) = X(5);
+        Xdot(4) = X(6);
+        Xdot(5:6) = -inv(M)*(C*X(5:6)+G)+[Kp1*(Xdot(1))-Kd1*X(5)+Ki1*X(1); Kp2*(Xdot(2))-Kd2*X(6)+Ki2*X(2)];
 end
